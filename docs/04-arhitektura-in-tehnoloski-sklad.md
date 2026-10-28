@@ -77,10 +77,10 @@ Natančni ukazi bodo prilagojeni končni strukturi repozitorija.
 
 ## Arhitekturne odločitve
 
-1. **Relacijska baza:** rezervacije in naročila imajo jasne povezave z uporabniki, zato PostgreSQL zagotavlja smiselne tuje ključe in konsistentnost.
-2. **Backend preverja poslovna pravila:** omejitev enega meseca in preprečevanje dvojnih rezervacij ne smeta biti odvisna samo od frontend obrazca.
-3. **Ločene vloge:** stranka, lastnica in administrator imajo različne pravice; vloga se preverja na strežniku.
-4. **Ločeni statusi zahtev:** `PENDING`, `APPROVED` in `REJECTED` omogočajo lastnici nadzor nad tem, kaj je dokončno potrjeno.
-5. **Fotografije zunaj baze:** večje datoteke se hranijo v shrambi, baza pa vsebuje le metapodatke oziroma URL.
-6. **Načrtovano opravilo za e-pošto:** dnevni povzetek je avtomatiziran in ne zahteva, da lastnica vsak dan ročno pregleduje aplikacijo.
-7. **Postopna izvedba:** najprej se implementirajo računi, koledar, rezervacije, naročila in dnevni povzetek; plačila in napredne funkcije ostanejo za kasnejše nadgradnje.
+1. **Relacijska baza** 
+2. **Typescript na frntendu in backendu** 
+3. **Preverjanje pravic na strežniku** 
+4. **Sejna avtentikacija in varno shranjevanje gesel** 
+5. **Fotografije zunaj baze** 
+6. **Načrtovano opravilo za e-pošto:** 
+7. **Prepričvanje dvojnih rezervacij**
