@@ -1,26 +1,18 @@
-# ADR-NNNN: Kratek naslov odločitve
-
-- **Status:** Predlagano
-- **Datum:** YYYY-MM-DD
-- **Nadomešča:** (če je relevantno)
+# ADR [številka]: [Naslov odločitve]
 
 ## Kontekst in problem
 
-Kateri problem, zahteva ali okoliščina zahteva odločitev?
+Opišite problem, omejitve in okoliščine, zaradi katerih je potrebna arhitekturna odločitev.
 
-## Obravnavane alternative
+## Obravnavane možnosti
 
-### Alternativa 1: [ime]
-
-Prednosti in slabosti.
-
-### Alternativa 2: [ime]
-
-Prednosti in slabosti.
+- **Možnost 1:** opis ter glavne prednosti in slabosti.
+- **Možnost 2:** opis ter glavne prednosti in slabosti.
+- **Možnost 3 (neobvezno):** opis ter glavne prednosti in slabosti.
 
 ## Odločitev
 
-Kaj smo izbrali in zakaj je ta možnost najprimernejša za projekt?
+Opišite izbrano možnost in razloge, zaradi katerih je najprimernejša za projekt.
 
 ## Posledice
 
@@ -28,10 +20,7 @@ Kaj smo izbrali in zakaj je ta možnost najprimernejša za projekt?
 
 - ...
 
-### Negativne
+### Negativne in kompromisi
 
 - ...
 
-## Povezane odločitve
-
-- ...
