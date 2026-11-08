@@ -75,3 +75,60 @@ UNIKAT/
         ├── 0001-postgresql-kot-relacijska-podatkovna-baza.md
         ├── 0002-poslovna-pravila-in-pravice-na-backendu.md
         └── 0003-locena-frontend-in-backend-arhitektura.md
+
+
+## 7. Namestitev in zagon projekta
+
+### Predpogoji
+
+Za lokalni razvoj potrebuješ:
+- Node.js in npm.
+- Docker Desktop.
+- Git.
+
+### Backend
+
+1. Odpri terminal v mapi `backend`.
+2. Namesti odvisnosti:
+
+   ```bash
+   npm install
+   ```
+
+3. Ustvari datoteko `.env` in nastavi povezavo do PostgreSQL podatkovne baze z uporabo spremenljivke `DATABASE_URL`.
+4. Zaženi migracije:
+
+   ```bash
+   npx prisma migrate dev
+   ```
+
+5. Zaženi razvojni strežnik:
+
+   ```bash
+   npm run dev
+   ```
+
+Backend je privzeto dostopen na `http://localhost:3000`.
+
+Zdravstveni pregled API-ja: `http://localhost:3000/api/health`.
+
+### Frontend
+
+1. Odpri nov terminal v mapi `frontend`.
+2. Namesti odvisnosti:
+
+   ```bash
+   npm install
+   ```
+
+3. Zaženi razvojni strežnik:
+
+   ```bash
+   npm run dev
+   ```
+
+Frontend je privzeto dostopen na `http://localhost:5173`.
+
+### Podatkovna baza
+
+Projekt uporablja PostgreSQL. Za lokalni razvoj je predviden Docker. Povezava do podatkovne baze se nastavi v datoteki `.env` z uporabo spremenljivke `DATABASE_URL`.
