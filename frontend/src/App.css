@@ -1,0 +1,562 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #51483f;
+  background: #f7f3ec;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --cream: #f7f3ec;
+  --pink: #e5cbc5;
+  --pink-dark: #c99f98;
+  --sage: #89947d;
+  --sage-dark: #68765f;
+  --text: #51483f;
+  --muted: #91877e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cream);
+}
+
+/* LEVA STRAN – PREDSTAVITEV UNIKAT */
+
+.brand-panel {
+  position: relative;
+  min-height: 100vh;
+  padding: 55px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, #f4e4df 0, transparent 32%),
+    radial-gradient(circle at 90% 85%, #d8c0b8 0, transparent 35%),
+    var(--pink);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+  text-align: center;
+}
+
+.brand-symbol {
+  color: var(--sage-dark);
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.brand-overline,
+.form-overline {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: var(--sage-dark);
+}
+
+.brand-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(64px, 8vw, 100px);
+  font-weight: 500;
+  letter-spacing: 8px;
+  color: #51483f;
+  margin: 15px 0;
+}
+
+.brand-content h1 span {
+  color: var(--sage-dark);
+}
+
+.brand-divider {
+  width: 55px;
+  height: 1px;
+  background: var(--sage-dark);
+  margin: 25px auto;
+}
+
+.brand-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 3.5vw, 43px);
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.brand-description {
+  max-width: 350px;
+  margin: 0 auto;
+  color: #71655d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.brand-decoration {
+  color: #ffffff80;
+  font-size: 100px;
+  margin-top: 35px;
+}
+
+.brand-footer {
+  position: absolute;
+  bottom: 25px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #71655d;
+}
+
+/* DESNA STRAN – REGISTRACIJA */
+
+.form-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 8%;
+  background: var(--cream);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.form-overline {
+  margin-bottom: 18px;
+}
+
+.register-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 3vw, 39px);
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.form-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 9px;
+  color: var(--text);
+}
+
+.form-group input {
+  width: 100%;
+  height: 49px;
+  border: 1px solid #e4ddd3;
+  border-radius: 9px;
+  padding: 0 14px;
+  background: #fffdfa;
+  color: var(--text);
+  outline: none;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #b5aaa0;
+}
+
+.form-group input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px #89947d20;
+}
+
+.input-hint {
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.register-card button {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 9px;
+  background: var(--sage-dark);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.register-card button:hover:not(:disabled) {
+  background: #56654e;
+  transform: translateY(-1px);
+}
+
+.register-card button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.register-card button span {
+  font-size: 18px;
+}
+
+.form-message {
+  padding: 12px;
+  margin-top: 18px;
+  border-radius: 8px;
+  background: #e7ecdf;
+  color: var(--sage-dark);
+  font-size: 12px;
+  text-align: center;
+}
+
+.form-note {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e0d6;
+  color: var(--muted);
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* PRILAGODITEV ZA TELEFONE IN TABLICE */
+
+@media (max-width: 850px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel {
+    min-height: 390px;
+    padding: 55px 25px;
+  }
+
+  .brand-content h1 {
+    font-size: 65px;
+  }
+
+  .brand-content h2 {
+    font-size: 30px;
+  }
+
+  .brand-decoration {
+    font-size: 65px;
+    margin-top: 15px;
+  }
+
+  .brand-footer {
+    bottom: 15px;
+  }
+
+  .form-panel {
+    padding: 55px 25px 65px;
+  }
+}
+
+@media (max-width: 430px) {
+  .name-fields {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .brand-panel {
+    min-height: 350px;
+  }
+
+  .form-panel {
+    padding: 45px 22px;
+  }
+}
+
+/* UNIKAT – brez okvirjev, čez celoten zaslon */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* UNIKAT – večja in preglednejša postavitev */
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.brand-panel {
+  min-height: 100vh;
+  padding: 70px 10%;
+}
+
+.brand-content {
+  max-width: 560px;
+}
+
+.brand-symbol {
+  font-size: 64px;
+  margin-bottom: 28px;
+}
+
+.brand-overline {
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.brand-content h1 {
+  font-size: clamp(76px, 7vw, 120px);
+  letter-spacing: 10px;
+  margin: 25px 0;
+}
+
+.brand-divider {
+  width: 75px;
+  margin: 35px auto;
+}
+
+.brand-content h2 {
+  font-size: clamp(40px, 4vw, 54px);
+  line-height: 1.35;
+  margin-bottom: 28px;
+}
+
+.brand-description {
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.brand-decoration {
+  font-size: 130px;
+  margin-top: 50px;
+}
+
+.brand-footer {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.form-panel {
+  min-height: 100vh;
+  padding: 70px 10%;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 540px;
+}
+
+.form-overline {
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.register-card h2 {
+  font-size: clamp(38px, 3.5vw, 48px);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.form-description {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 42px;
+}
+
+.name-fields {
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.form-group input {
+  height: 62px;
+  padding: 0 12px;
+  font-size: 17px;
+}
+
+.input-hint {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.register-card button {
+  height: 66px;
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.register-card button span {
+  font-size: 24px;
+}
+
+.form-message {
+  padding: 16px;
+  margin-top: 22px;
+  font-size: 15px;
+}
+
+.form-note {
+  margin-top: 40px;
+  padding-top: 26px;
+  font-size: 18px;
+}
+
+@media (max-width: 850px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel {
+    min-height: 430px;
+    padding: 55px 25px;
+  }
+
+  .brand-content h1 {
+    font-size: 76px;
+  }
+
+  .brand-content h2 {
+    font-size: 38px;
+  }
+
+  .brand-description {
+    font-size: 16px;
+  }
+
+  .form-panel {
+    min-height: auto;
+    padding: 65px 30px;
+  }
+
+  .register-card {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 430px) {
+  .name-fields {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .brand-panel {
+    min-height: 390px;
+  }
+
+  .form-panel {
+    padding: 50px 24px;
+  }
+}
+
+/* Povezava do prijave */
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 28px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.login-link a {
+  color: var(--sage-dark);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sage-dark);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.login-link a:hover {
+  color: var(--pink-dark);
+  border-color: var(--pink-dark);
+}
+.user-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+  color: var(--sage-dark);
+  font-size: 17px;
+}
+
+.user-welcome p {
+  margin: 0;
+}
+
+.logout-button {
+  width: auto;
+  padding: 10px 18px;
+  background: var(--sage-dark);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background: var(--pink-dark);
+}
