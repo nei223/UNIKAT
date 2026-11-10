@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
+import HomePage from "./HomePage";
+import Dashboard from "./pages/Dashboard";
+import BookingPage from "./pages/BookingPage";
+import GalleryPage from "./pages/GalleryPage";
+import CommunityPage from "./pages/CommunityPage";
 function App() {
-  const isLoginPage = window.location.pathname === "/login";
+  const currentPath = window.location.pathname;
 
+  const isLoginPage = currentPath === "/login";
+  const isRegisterPage = currentPath === "/register";
+  const isHomePage = currentPath === "/";
+  const isDashboardPage = currentPath === "/dashboard";
+  const isBookingPage = currentPath === "/booking";
+  const isGalleryPage = currentPath === "/gallery";
+  const isCommunityPage = currentPath === "/community";
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,6 +39,14 @@ function App() {
 
       const data = await response.json();
       setCurrentUser(data.user);
+
+      if (
+        window.location.pathname === "/login" ||
+        window.location.pathname === "/register" ||
+        window.location.pathname === "/"
+      ) {
+        window.location.href = "/dashboard";
+      }
     } catch {
       setCurrentUser(null);
     }
@@ -133,12 +152,45 @@ function App() {
       }
 
       setCurrentUser(null);
+      window.location.href = "/";
       setMessage("Uspešno si se odjavila!");
     } catch {
       setMessage("Povezava s strežnikom ni uspela.");
     }
   };
+  
+if (currentUser && isDashboardPage) {
   return (
+    <Dashboard
+      currentUser={currentUser}
+      onLogout={handleLogout}
+    />
+  );
+}
+
+if (currentUser && isBookingPage) {
+  return <BookingPage />;
+}
+
+if (currentUser && isGalleryPage) {
+  return <GalleryPage />;
+}
+
+if (currentUser && isCommunityPage) {
+  return <CommunityPage />;
+}
+
+if (isHomePage) {
+  return (
+    <HomePage
+      currentUser={currentUser}
+      onLogout={handleLogout}
+    />
+  );
+}
+
+
+return (
     <main className="page-container">
       <section className="brand-panel">
         <div className="brand-content">
@@ -242,7 +294,7 @@ function App() {
 
                 <div className="login-link">
                   <span>Še nimaš računa?</span>
-                  <a href="/">Registriraj se</a>
+                  <a href="/register">Registriraj se</a>
                 </div>
 
                 {message && (
