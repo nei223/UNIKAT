@@ -560,3 +560,547 @@ body {
 .logout-button:hover {
   background: var(--pink-dark);
 }
+
+
+/* =================================
+   UNIKAT – DOMAČA STRAN
+================================= */
+
+.home-page {
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--text);
+}
+
+.home-header {
+  min-height: 100px;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--cream);
+}
+
+.home-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.home-logo span {
+  color: var(--sage-dark);
+}
+
+.home-navigation {
+  display: flex;
+  gap: 38px;
+}
+
+.home-navigation a,
+.home-login-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.home-navigation a:hover,
+.home-login-link:hover {
+  color: var(--sage-dark);
+}
+
+.home-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.home-register-button,
+.home-login-button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 5px;
+  background: var(--sage-dark);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.home-user {
+  font-size: 13px;
+}
+
+.home-hero {
+  min-height: 650px;
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  background:
+    radial-gradient(circle at 10% 20%, #f2e4dc, transparent 35%),
+    var(--pink);
+}
+
+.home-hero-content {
+  max-width: 540px;
+}
+
+.home-overline {
+  color: var(--sage-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.home-hero h1,
+.home-about h2,
+.home-offer h2,
+.home-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.home-hero h1 {
+  font-size: clamp(48px, 5.5vw, 76px);
+  margin: 0 0 28px;
+}
+
+.home-hero h1 span {
+  color: var(--sage-dark);
+}
+
+.home-hero-description {
+  max-width: 440px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #71655d;
+  margin-bottom: 35px;
+}
+
+.home-main-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 27px;
+  background: var(--sage-dark);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-main-button:hover {
+  background: #56654e;
+  transform: translateY(-2px);
+}
+
+.home-hero-note {
+  margin-top: 30px;
+  color: #82766d;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.home-hero-visual {
+  min-height: 440px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 45%, #fffaf0 0 22%, transparent 23%),
+    radial-gradient(circle at 50% 45%, #c8b5a6 0 42%, transparent 43%),
+    #d9c8bd;
+}
+
+.home-flower-circle {
+  width: 260px;
+  height: 260px;
+  border: 1px solid #89947d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-flower-circle span {
+  font-size: 150px;
+  color: var(--sage-dark);
+}
+
+.home-flower-small {
+  position: absolute;
+  top: 45px;
+  right: 55px;
+  font-size: 65px;
+  color: white;
+}
+
+.home-visual-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.home-about {
+  padding: 110px 20px;
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+.home-about h2 {
+  font-size: clamp(40px, 5vw, 60px);
+  margin: 0 0 25px;
+}
+
+.home-about > p:last-child {
+  max-width: 650px;
+  margin: auto;
+  font-size: 17px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.home-offer {
+  padding: 100px 9%;
+  background: #eee9df;
+  text-align: center;
+}
+
+.home-offer h2 {
+  font-size: clamp(38px, 4vw, 54px);
+  margin: 0 0 60px;
+}
+
+.home-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.home-offer-card {
+  padding: 45px 30px;
+  background: var(--cream);
+}
+
+.offer-icon {
+  font-size: 48px;
+  color: var(--sage-dark);
+}
+
+.home-offer-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.home-offer-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.home-cta {
+  padding: 110px 20px;
+  text-align: center;
+  background: var(--pink);
+}
+
+.home-cta h2 {
+  font-size: clamp(42px, 5vw, 65px);
+  margin: 0 0 25px;
+}
+
+.home-cta > p:not(.home-overline) {
+  color: #71655d;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.home-footer {
+  padding: 40px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.home-footer p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .home-header {
+    flex-wrap: wrap;
+  }
+
+  .home-navigation {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    padding: 65px 8%;
+  }
+
+  .home-hero-visual {
+    min-height: 350px;
+  }
+
+  .home-offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header {
+    padding: 20px;
+  }
+
+  .home-logo {
+    font-size: 28px;
+  }
+
+  .home-navigation {
+    gap: 15px;
+  }
+
+  .home-navigation a {
+    font-size: 12px;
+  }
+
+  .home-header-actions {
+    gap: 12px;
+  }
+
+  .home-hero {
+    padding: 55px 24px;
+  }
+
+  .home-hero-visual {
+    min-height: 280px;
+  }
+
+  .home-flower-circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .home-flower-circle span {
+    font-size: 110px;
+  }
+
+  .home-about,
+  .home-offer,
+  .home-cta {
+    padding: 75px 24px;
+  }
+}
+
+/* =================================
+   UNIKAT – UPORABNIŠKA NADZORNA PLOŠČA
+================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.dashboard-header {
+  min-height: 95px;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  background: #fffdfa;
+}
+
+.dashboard-navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.dashboard-navigation a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.dashboard-navigation a:hover {
+  color: var(--sage-dark);
+}
+
+.dashboard-account {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.dashboard-account button {
+  padding: 12px 20px;
+  border: none;
+  background: var(--sage-dark);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-welcome {
+  padding: 100px 10%;
+  background:
+    radial-gradient(circle at 85% 20%, #f7e8df, transparent 35%),
+    var(--pink);
+}
+
+.dashboard-welcome h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.dashboard-welcome h1 span {
+  color: var(--sage-dark);
+}
+
+.dashboard-welcome > p:last-child {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #71655d;
+}
+
+.dashboard-content {
+  padding: 90px 9%;
+}
+
+.dashboard-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: 400;
+  margin: 0 0 45px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.dashboard-card {
+  min-height: 280px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fffdfa;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #51483f12;
+}
+
+.dashboard-card > span {
+  color: var(--sage-dark);
+  font-size: 45px;
+}
+
+.dashboard-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 20px 0 10px;
+}
+
+.dashboard-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.dashboard-card strong {
+  margin-top: auto;
+  padding-top: 20px;
+  color: var(--sage-dark);
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .dashboard-header {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-navigation {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-welcome {
+    padding: 75px 8%;
+  }
+
+  .dashboard-content {
+    padding: 65px 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .dashboard-navigation {
+    gap: 13px;
+  }
+
+  .dashboard-navigation a {
+    font-size: 12px;
+  }
+
+  .dashboard-account {
+    gap: 10px;
+  }
+}
